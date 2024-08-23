@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckList.Api", "CheckList.Api\CheckList.Api.csproj", "{E26B861E-D26A-4CBA-B5D2-E16C34EA8CC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E26B861E-D26A-4CBA-B5D2-E16C34EA8CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E26B861E-D26A-4CBA-B5D2-E16C34EA8CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E26B861E-D26A-4CBA-B5D2-E16C34EA8CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E26B861E-D26A-4CBA-B5D2-E16C34EA8CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {907CB439-AECE-4B94-908C-33A57A71D67C}
+	EndGlobalSection
+EndGlobal

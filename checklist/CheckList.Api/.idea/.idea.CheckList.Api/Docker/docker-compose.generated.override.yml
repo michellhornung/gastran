@@ -1,0 +1,20 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.8"
+services:
+  web:
+    build:
+      context: "/home/prodemge/Downloads/CheckList/CheckList.Api"
+      dockerfile: "Dockerfile"
+      target: "build"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/CheckList.Api.dll"
+    environment: {}
+    image: "checklist.api:dev"
+    ports: []
+    volumes:
+    - "/home/prodemge/.nuget/packages:/root/.nuget/packages"
+    - "/home/prodemge/Downloads/CheckList/CheckList.Api:/app:rw"
+    - "/home/prodemge/Downloads/CheckList/CheckList.Api:/src:rw"
+    working_dir: "/app"

@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 1433:1433
+    volumes:
+      - /var/opt/mssql
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
+    command: sh -c ' chmod +x ./entrypoint.sh; ./entrypoint.sh & /opt/mssql/bin/sqlservr;'
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: YourComplexPassword123!
+      
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: checklist_api
+    depends_on:
+      - db
+    ports:
+      - "5008:5008"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Database=CheckListDb;User Id=sa;Password=YourComplexPassword123!;
+volumes:
+  sql_data:
